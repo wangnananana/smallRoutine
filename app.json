@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/detail/detail",
     "pages/shop/shop",
-    "pages/foot/foot"
+    "pages/foot/foot",
+    "pages/evaluate/evaluate",
+    "pages/business/business"
   ],
   "window": {
     "backgroundTextStyle": "light",

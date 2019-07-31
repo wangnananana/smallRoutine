@@ -1,3 +1,6 @@
+<import src="../shop/shop"/>
+<import src="../evaluate/evaluate"/>
+<import src="../business/business"/>
 <!--index.wxml-->
 <view class="box">
   <view class="head">
@@ -26,34 +29,48 @@
       <view>粥品香坊其烹饪粥料的秘方源于中国千年古法，再融合现代制作工...</view>
       <view> > </view>
   </view>
+
+      
+
+ 
 </view>
+
   <!-- 内容区 -->
   <view class="content">
-    <view class="mine">
-      <view class="list">
-        <!-- 商品 -->
-         <view class="shop">
-         <navigator bindtap='bindViewTap'  hover-class="navigator-hover">
-            商品
-         </navigator>
+     <view class="mine" style="background:#fff">
+        <view class="list">
+          <!-- 商品 -->
+          <view class="shop" bindtap="swichNav" data-current="0">
+              商品
+          </view>
+          <!-- 商品 -->
+          <!-- 评价 -->
+          <view class="comment" bindtap="swichNav" data-current="1">
+            评论
+          </view>
+          <!-- 评价 -->
+          <!-- 商家 -->
+          <view class="merchant" bindtap="swichNav"  data-current="2">
+              商家
+          </view>
+          <!-- 商家 -->
         </view>
-        <!-- 商品 -->
-        <!-- 评价 -->
-        <view class="comment">
-          评论
-        </view>
-        <!-- 评价 -->
-        <!-- 商家 -->
-        <view class="merchant">
-            商家
-        </view>
-        <!-- 商家 -->
+        <swiper current="{{currentTab}}" duration="200" bindchange='swiperChange'>
+          <swiper-item>
+            <template is="Shop"/>
+          </swiper-item>
+           <swiper-item>
+            <template is="Evaluate"/>
+          </swiper-item>
+           <swiper-item>
+            <template is="Business"/>
+          </swiper-item>
+        </swiper>
       </view>
-    </view>
       <!-- 商品点餐页面 -->
         <view class="shangpin">
-        <view class="shop-left" scroll-top="{{scrollTop}}">
-          <shop></shop>
+        <view class="shop-left">
+         
         </view>
         </view>
       <!-- 商品点餐页面 -->

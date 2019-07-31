@@ -3,7 +3,7 @@
 /* 头部最大div */
 .head{
   width: 100%;
-  height: 130px;
+  height: 260rpx;
   background: #e1e1e1;
 }
 /* 头部裹着左右俩个div */
@@ -12,11 +12,11 @@
 }
 /* 头部左边 */
 .head-left{
-  width: 64px;
-  height: 64px;
+  width: 128rpx;
+  height: 128rpx;
   border: 1px solid black;
-  margin-top: 24px;
-  margin-left: 24px;
+  margin-top: 48rpx;
+  margin-left: 48rpx;
 }
 .head-left img{
   width: 100%;
@@ -24,32 +24,32 @@
 }
 /* 头部右边 */
 .head-right{
-  margin-left: 16px;
+  margin-left: 32rpx;
 }
 /* 第一行内容 */
 .head-right-top{
   display: flex;
-  margin-top: 18px;
+  margin-top: 36rpx;
 }
 .head-right-top view:nth-of-type(1){
-  width: 31px;
-  height: 19px;
+  width: 92rpx;
+  height: 38rpx;
   background: red;
-  font-size: 12px;
+  font-size: 24rpx;
   font-weight: 800;
   color: white;
-  line-height: 19px;
+  line-height: 38rpx;
   text-align: center;
-  margin-top: 3px;
+  margin-top: 6rpx;
 }
 .head-right-top view:nth-of-type(2){
-  font-size: 17px;
+  font-size: 34rpx;
   font-weight: 800;
   color: white;
-  margin-left: 6px;
+  margin-left: 12rpx;
 }
 .head-right-top view:nth-of-type(3){
-  font-size: 17px;
+  font-size: 34rpx;
   font-weight: 800;
   color: white;
 }
@@ -58,72 +58,72 @@
 }
 /* 第二行内容 */
 .head-right-center{
-  font-size: 14px;
+  font-size: 28rpx;
   color: white;
-  margin-top: 8px;
+  margin-top: 16rpx;
 }
 /* 第三行内容 */
 .head-right-bottom{
   color: white;
-  margin-top: 7px;
+  margin-top: 14rpx;
 }
 .head-right-bottom view:nth-of-type(1){
-  width: 14px;
-  height: 14px;
+  width: 28rpx;
+  height: 28rpx;
   background: white;
-  border-radius: 3px;
+  border-radius: 6rpx;
   color: red;
-  font-size: 10px;
+  font-size: 20rpx;
   text-align: center;
-  line-height: 14px;
-  margin-top: 2px;
+  line-height: 28rpx;
+  margin-top: 4rpx;
 }
 .head-right-bottom view:nth-of-type(2){
-  margin-left: 4px;
-  font-size: 13px;
+  margin-left: 8rpx;
+  font-size: 26rpx;
 }
 .head-right-bottom view:nth-of-type(3){
-  width: 42px;
-  height: 19px;
+  width: 84rpx;
+  height: 38rpx;
   background-color: red;
   color:white;
-  font-size: 10px;
-  border-radius: 10px;
+  font-size: 20rpx;
+  border-radius: 20rpx;
   text-align: center;
-  line-height:18px;
-  margin-left: 40px;
+  line-height:36rpx;
+  margin-left: 80rpx;
 }
 .head-foot{
   width: 100%;
-  height: 28px;
+  height: 56rpx;
   background: red;
-  margin-top: 9px;
+  margin-top: 18rpx;
   display: flex;
-  line-height: 28px;
+  line-height: 56rpx;
 }
 .head-foot view:nth-of-type(1){
-  width: 22px;
-  height: 12px;
+  width: 44rpx;
+  height: 24rpx;
   background: white;
   color: #6a7076;
   text-align: center;
-  line-height: 12px;
-  font-size: 9px;
-  margin-left: 12px;
-  margin-top: 8.5px;
+  line-height: 24rpx;
+  font-size: 18rpx;
+  margin-left: 24rpx;
+  margin-top: 17rpx;
   font-weight: 800;
 }
 .head-foot view:nth-of-type(2){
   color: white;
-  font-size: 9px;
-  margin-left: 4px;
+  font-size: 18rpx;
+  margin-left: 8rpx;
   white-space: nowrap;
 	text-overflow:ellipsis;
 	overflow:hidden;
 }
 .head-foot :nth-of-type(3){
-  font-size: 9px;
-  margin-left: 5px;
+  font-size: 18rpx;
+  margin-left: 10rpx;
   color: white;
 }
 
@@ -144,12 +144,7 @@ body,html{
   display: flex;
   flex-direction: column;
 }
-.box>.header{
-    width:100%;
-    height: 130px;
-    background: red;
-    border: 1px solid red;
-  }
+
   .box>.footer{
       width: 100%;
       height: 100px;
@@ -162,17 +157,20 @@ body,html{
   }
   .box .content .mine{
     width: 100%;
+    height: 80rpx;
+
   }
   .box .content .mine .list{
     border: 1px solid gainsboro;
      display: flex;
+     height: 80rpx;
      width: 100%;
   }
   .list view{
     flex: 1;
-    padding: 10px 45px;
+    padding: 20rpx 90rpx;
   }
-  .shop .navigator-hover{
+  .shop:hover{
     color:red;
     background-color: rgba(0, 0, 0, 0.1);
     opacity: 0.7;
