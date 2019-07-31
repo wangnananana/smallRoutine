@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="box">
+  <view class="header">
+    <!-- <view class="img"></view> -->
+  </view>
+  <!-- 内容区 -->
+  <view class="content">
+    <view class="mine">
+      <view class="list">
+        <!-- 商品 -->
+         <view class="shop">
+         <navigator bindtap='bindViewTap'  hover-class="navigator-hover">
+            商品
+         </navigator>
+        </view>
+        <!-- 商品 -->
+        <!-- 评价 -->
+        <view class="comment">
+          评论
+        </view>
+        <!-- 评价 -->
+        <!-- 商家 -->
+        <view class="merchant">
+            商家
+        </view>
+        <!-- 商家 -->
+      </view>
+    </view>
+      <!-- 商品点餐页面 -->
+        <view class="shangpin">
+        <view class="shop-left" scroll-top="{{scrollTop}}">
+          <shop></shop>
+        </view>
+        </view>
+      <!-- 商品点餐页面 -->
+  </view>
+  <view class="footer">
+
+  </view>
+<!-- 内容区 -->
+</view>

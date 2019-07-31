@@ -1,0 +1,22 @@
+<view>
+  <scroll-view class="shoplist">
+  <view>我</view>
+    <view>我</view>
+    <view>我</view>
+    <view>我</view>
+    <view>我</view>
+    <view>我</view>
+      <view>我</view>
+    <view>我</view>
+    <view>我</view>
+    <view>我</view>
+    <view>我</view>
+    <view>我</view>
+      <view>我</view>
+    <view>我</view>
+    <view>我</view>
+    <view>我</view>
+    <view>我</view>
+    <view>我</view>
+  </scroll-view>
+</view>
