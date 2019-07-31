@@ -1,4 +1,133 @@
 /**detail.wxss**/
+/* 头部 */
+/* 头部最大div */
+.head{
+  width: 100%;
+  height: 130px;
+  background: #e1e1e1;
+}
+/* 头部裹着左右俩个div */
+.head-div{
+  display: flex;
+}
+/* 头部左边 */
+.head-left{
+  width: 64px;
+  height: 64px;
+  border: 1px solid black;
+  margin-top: 24px;
+  margin-left: 24px;
+}
+.head-left img{
+  width: 100%;
+  height: 100%;
+}
+/* 头部右边 */
+.head-right{
+  margin-left: 16px;
+}
+/* 第一行内容 */
+.head-right-top{
+  display: flex;
+  margin-top: 18px;
+}
+.head-right-top view:nth-of-type(1){
+  width: 31px;
+  height: 19px;
+  background: red;
+  font-size: 12px;
+  font-weight: 800;
+  color: white;
+  line-height: 19px;
+  text-align: center;
+  margin-top: 3px;
+}
+.head-right-top view:nth-of-type(2){
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+  margin-left: 6px;
+}
+.head-right-top view:nth-of-type(3){
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+}
+.head-right-bottom{
+  display: flex;
+}
+/* 第二行内容 */
+.head-right-center{
+  font-size: 14px;
+  color: white;
+  margin-top: 8px;
+}
+/* 第三行内容 */
+.head-right-bottom{
+  color: white;
+  margin-top: 7px;
+}
+.head-right-bottom view:nth-of-type(1){
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 3px;
+  color: red;
+  font-size: 10px;
+  text-align: center;
+  line-height: 14px;
+  margin-top: 2px;
+}
+.head-right-bottom view:nth-of-type(2){
+  margin-left: 4px;
+  font-size: 13px;
+}
+.head-right-bottom view:nth-of-type(3){
+  width: 42px;
+  height: 19px;
+  background-color: red;
+  color:white;
+  font-size: 10px;
+  border-radius: 10px;
+  text-align: center;
+  line-height:18px;
+  margin-left: 40px;
+}
+.head-foot{
+  width: 100%;
+  height: 28px;
+  background: red;
+  margin-top: 9px;
+  display: flex;
+  line-height: 28px;
+}
+.head-foot view:nth-of-type(1){
+  width: 22px;
+  height: 12px;
+  background: white;
+  color: #6a7076;
+  text-align: center;
+  line-height: 12px;
+  font-size: 9px;
+  margin-left: 12px;
+  margin-top: 8.5px;
+  font-weight: 800;
+}
+.head-foot view:nth-of-type(2){
+  color: white;
+  font-size: 9px;
+  margin-left: 4px;
+  white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+.head-foot :nth-of-type(3){
+  font-size: 9px;
+  margin-left: 5px;
+  color: white;
+}
+
+/* 内容 */
 page{
   width: 100%;
   height: 100%

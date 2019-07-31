@@ -1,8 +1,32 @@
 <!--index.wxml-->
 <view class="box">
-  <view class="header">
-    <!-- <view class="img"></view> -->
+  <view class="head">
+  <view class="head-div">
+  <view class="head-left">
+      图片
+    </view>
+    <view class="head-right">
+      <view class="head-right-top">
+        <view>品牌</view>
+        <view>粥品香坊</view>
+        <view>（回龙观）</view>
+      </view>
+      <view class="head-right-center">
+        蜂鸟专送/38分钟送达
+      </view>
+      <view class="head-right-bottom">
+        <view>减</view>
+        <view>在线支付满28减5</view>
+        <view>5个 > </view>
+      </view>
+    </view>
+</view>
+  <view class="head-foot">
+      <view>公告</view>
+      <view>粥品香坊其烹饪粥料的秘方源于中国千年古法，再融合现代制作工...</view>
+      <view> > </view>
   </view>
+</view>
   <!-- 内容区 -->
   <view class="content">
     <view class="mine">
