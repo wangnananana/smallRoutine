@@ -1,82 +1,104 @@
-<import src="../shop/shop"/>
-<import src="../evaluate/evaluate"/>
-<import src="../business/business"/>
-<!--index.wxml-->
-<view class="box">
-  <view class="head">
-  <view class="head-div">
-  <view class="head-left">
-      图片
+<view class='detail'>
+<!-- 内容部分 -->
+  <view class='con'>
+    <view class='detail-img'>
+      <image src="{{detail.image}}" class='img'></image>
     </view>
-    <view class="head-right">
-      <view class="head-right-top">
-        <view>品牌</view>
-        <view>粥品香坊</view>
-        <view>（回龙观）</view>
+    <!-- 文字内容部分  -->
+    <view class='con-txt'>
+        <!-- 名称加入购物车 -->
+      <view class='detail-main'>
+        <text class='main-name'>{{detail.name}}</text>
+        <!-- 月售，好评 -->
+        <view class='main-onsale'>
+          <text class='onsale'>{{detail.name}}</text>
+          <text class='good'>{{detail.name}}</text>
+        </view>
+        <!-- 价格 -->
+        <view class='main-pic'>
+          <view class='pic-price'>
+            <text class='pic-xian'>
+              <text class='price-fu'>￥</text>
+              <text class='price-xian'>{{detail.price}}</text>
+            </text>
+            <text class='pic-yuan'>￥{{detail.price}}</text>
+          </view>
+          <view class='pic-cart'>加入购物车</view> 
+        </view>
+        <!-- 加入购物车闭合 -->
       </view>
-      <view class="head-right-center">
-        蜂鸟专送/38分钟送达
+      <!-- 空  -->
+      <!-- <view class='null'></view> -->
+      <!-- 商品介绍 -->
+      <view class='introduce'>
+        <view class='int-name'>商品介绍</view>
+        <text class='int-con'>{{detail.info}}</text>
       </view>
-      <view class="head-right-bottom">
-        <view>减</view>
-        <view>在线支付满28减5</view>
-        <view>5个 > </view>
+      <!-- 商品评价 -->
+      <view class='evaluate'>
+        <view class='eva-name'>商品评价</view>
+        <!-- 全部。。。按钮 -->
+        <view class='eva-eva'>
+          <view class='evabg {{menuTapCurrent=="0"?"btn_selected":""}}' data-current="0" catchtap="menuTap">全部
+            <text>{{all.length}}</text>
+          </view>
+          <view  class='evabg {{menuTapCurrent=="1"?"btn_selected":""}}' data-current="1" catchtap="menuTap">推荐
+            <text>{{tui.length}}</text>
+          </view>
+          <view  class='evabg {{menuTapCurrent=="2"?"btn_selected":""}}' data-current="2" catchtap="menuTap">吐槽
+            <text>{{tu.length}}</text>
+          </view>
+        </view>
+        <!-- 评价内容 -->
+        <view class='eva-con'>
+        <!-- 全部 -->
+          <view hidden="{{menuTapCurrent!='0'}}" wx:for="{{pingjia}}" wx-for-item='item' wx:key='key'  class='con-all'>
+            <view class='all'>
+              <view class='all-title'>
+                <view class='all-time'>{{item.rateTime}}</view> 
+                <view classs='all-name'>
+                  <text>{{item.username}}</text>
+                  <image src="{{item.avatar}}" class='all-img'></image>
+                </view>
+              </view>
+              <view class='all-text' wx:if='{{item.text===""}}'>用户暂无评价</view>
+              <view class='all-text' wx:if='{{item.text!==""}}'>{{item.text}}</view>
+            </view>
+          </view>
+          <!-- 推荐 -->
+          <view hidden="{{menuTapCurrent!='1'}}"  wx:for="{{pingjia}}" wx-for-item='item' wx:key='key'  class='con-all'>
+            <view class='all' wx:if='{{item.rateType===0}}'>
+              <view class='all-title'>
+                <view class='all-time'>{{item.rateTime}}</view> 
+                <view classs='all-name'>
+                  <text>{{item.username}}</text>
+                  <image src="{{item.avatar}}" class='all-img'></image>
+                </view>
+              </view>
+              <view class='all-text' wx:if='{{item.text===""}}'>用户暂无评价</view>
+              <view class='all-text' wx:if='{{item.text!==""}}'>{{item.text}}</view>
+            </view>
+          </view>
+          <!-- 吐槽 -->
+          <view hidden="{{menuTapCurrent!='2'}}"  wx:for="{{pingjia}}" wx-for-item='item' wx:key='key' >
+            <view class='all' wx:if='{{item.rateType===1}}'>
+              <view class='all-title'>
+                <view class='all-time'>{{item.rateTime}}</view> 
+                <view classs='all-name'>
+                  <text>{{item.username}}</text>
+                  <image src="{{item.avatar}}" class='all-img'></image>
+                </view>
+              </view>
+              <view class='all-text' wx:if='{{item.text===""}}'>用户暂无评价</view>
+              <view class='all-text' wx:if='{{item.text!==""}}'>{{item.text}}</view>
+            </view>
+          </view>
+        </view>
       </view>
+      <!-- 文字内容部分闭合 -->
     </view>
-</view>
-  <view class="head-foot">
-      <view>公告</view>
-      <view>粥品香坊其烹饪粥料的秘方源于中国千年古法，再融合现代制作工...</view>
-      <view> > </view>
+    <!-- 内容闭合 -->
   </view>
+  <view class='footer'>footer</view>
 
-      
-
- 
-</view>
-
-  <!-- 内容区 -->
-  <view class="content">
-     <view class="mine" style="background:#fff">
-        <view class="list">
-          <!-- 商品 -->
-          <view class="shop" bindtap="swichNav" data-current="0">
-              商品
-          </view>
-          <!-- 商品 -->
-          <!-- 评价 -->
-          <view class="comment" bindtap="swichNav" data-current="1">
-            评论
-          </view>
-          <!-- 评价 -->
-          <!-- 商家 -->
-          <view class="merchant" bindtap="swichNav"  data-current="2">
-              商家
-          </view>
-          <!-- 商家 -->
-        </view>
-        <swiper current="{{currentTab}}" duration="200" bindchange='swiperChange'>
-          <swiper-item>
-            <template is="Shop"/>
-          </swiper-item>
-           <swiper-item>
-            <template is="Evaluate"/>
-          </swiper-item>
-           <swiper-item>
-            <template is="Business"/>
-          </swiper-item>
-        </swiper>
-      </view>
-      <!-- 商品点餐页面 -->
-        <view class="shangpin">
-        <view class="shop-left">
-         
-        </view>
-        </view>
-      <!-- 商品点餐页面 -->
-  </view>
-  <view class="footer">
-
-  </view>
-<!-- 内容区 -->
 </view>

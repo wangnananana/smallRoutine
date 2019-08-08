@@ -1,177 +1,169 @@
-/**detail.wxss**/
-/* 头部 */
-/* 头部最大div */
-.head{
-  width: 100%;
-  height: 260rpx;
-  background: #e1e1e1;
-}
-/* 头部裹着左右俩个div */
-.head-div{
-  display: flex;
-}
-/* 头部左边 */
-.head-left{
-  width: 128rpx;
-  height: 128rpx;
-  border: 1px solid black;
-  margin-top: 48rpx;
-  margin-left: 48rpx;
-}
-.head-left img{
+/* pages/detail/detail.wxss */
+/* 首尾固定 */
+page,.detail{
   width: 100%;
   height: 100%;
 }
-/* 头部右边 */
-.head-right{
-  margin-left: 32rpx;
-}
-/* 第一行内容 */
-.head-right-top{
-  display: flex;
-  margin-top: 36rpx;
-}
-.head-right-top view:nth-of-type(1){
-  width: 92rpx;
-  height: 38rpx;
-  background: red;
-  font-size: 24rpx;
-  font-weight: 800;
-  color: white;
-  line-height: 38rpx;
-  text-align: center;
-  margin-top: 6rpx;
-}
-.head-right-top view:nth-of-type(2){
-  font-size: 34rpx;
-  font-weight: 800;
-  color: white;
-  margin-left: 12rpx;
-}
-.head-right-top view:nth-of-type(3){
-  font-size: 34rpx;
-  font-weight: 800;
-  color: white;
-}
-.head-right-bottom{
-  display: flex;
-}
-/* 第二行内容 */
-.head-right-center{
-  font-size: 28rpx;
-  color: white;
-  margin-top: 16rpx;
-}
-/* 第三行内容 */
-.head-right-bottom{
-  color: white;
-  margin-top: 14rpx;
-}
-.head-right-bottom view:nth-of-type(1){
-  width: 28rpx;
-  height: 28rpx;
-  background: white;
-  border-radius: 6rpx;
-  color: red;
-  font-size: 20rpx;
-  text-align: center;
-  line-height: 28rpx;
-  margin-top: 4rpx;
-}
-.head-right-bottom view:nth-of-type(2){
-  margin-left: 8rpx;
-  font-size: 26rpx;
-}
-.head-right-bottom view:nth-of-type(3){
-  width: 84rpx;
-  height: 38rpx;
-  background-color: red;
-  color:white;
-  font-size: 20rpx;
-  border-radius: 20rpx;
-  text-align: center;
-  line-height:36rpx;
-  margin-left: 80rpx;
-}
-.head-foot{
-  width: 100%;
-  height: 56rpx;
-  background: red;
-  margin-top: 18rpx;
-  display: flex;
-  line-height: 56rpx;
-}
-.head-foot view:nth-of-type(1){
-  width: 44rpx;
-  height: 24rpx;
-  background: white;
-  color: #6a7076;
-  text-align: center;
-  line-height: 24rpx;
-  font-size: 18rpx;
-  margin-left: 24rpx;
-  margin-top: 17rpx;
-  font-weight: 800;
-}
-.head-foot view:nth-of-type(2){
-  color: white;
-  font-size: 18rpx;
-  margin-left: 8rpx;
-  white-space: nowrap;
-	text-overflow:ellipsis;
-	overflow:hidden;
-}
-.head-foot :nth-of-type(3){
-  font-size: 18rpx;
-  margin-left: 10rpx;
-  color: white;
-}
-
-/* 内容 */
-page{
-  width: 100%;
-  height: 100%
-}
-body,html{
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  list-style: none;
-}
-.box{
-  width: 100%;
-  height: 100%;
+.detail{
   display: flex;
   flex-direction: column;
 }
-
-  .box>.footer{
-      width: 100%;
-      height: 100px;
-      background: greenyellow;
-  }
-  .box .content{
-      width: 100%;
-      flex: 1;
-      overflow: auto;
-  }
-  .box .content .mine{
-    width: 100%;
-    height: 80rpx;
-
-  }
-  .box .content .mine .list{
-    border: 1px solid gainsboro;
-     display: flex;
-     height: 80rpx;
-     width: 100%;
-  }
-  .list view{
-    flex: 1;
-    padding: 20rpx 90rpx;
-  }
-  .shop:hover{
-    color:red;
-    background-color: rgba(0, 0, 0, 0.1);
-    opacity: 0.7;
-  }
+.con{
+  flex: 1;
+  overflow: auto;
+}
+.footer{
+  height: 40rpx;
+  background: red;
+}
+/* con部分 */
+/* 图片 */
+.detail-img{
+  height: 750rpx;
+}
+.img{
+  height: 100%;
+  width: 100%;
+}
+/* 文字部分 */
+.con-txt{
+  background: #f3f5f7;
+}
+/* 名称，加入购物车 */
+.detail-main{
+  box-sizing: border-box;
+  height: 217rpx;
+  width: 100%;
+  background: #ffffff;
+  padding: 36rpx;
+  margin-bottom: 32rpx;
+}
+/* 名字 */
+.main-name{
+  font-size: 28rpx;
+  font-weight: 700;
+  color:rgb(7,17,27);
+  line-height: 28rpx;
+}
+/* 月售 */
+.main-onsale{
+  font-size: 20rpx;
+  color:rgb(147,153,159);
+  line-height: 20rpx;
+  margin-top:16rpx;
+}
+/* 好评 */
+.good{
+  margin-left:24rpx;
+}
+/* 价格和加入购物车 */
+.main-pic{
+  margin-top:20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+/* 现价 */
+.pic-xian{
+  font-size: 28rpx;
+  color: red
+}
+.price-fu{
+  font-size: 20rpx;
+}
+/* 原价 */
+.pic-yuan{
+  margin-left: 18rpx;
+  font-size: 20rpx;
+  color: #93999f;
+  text-decoration: line-through;
+}
+/* 加入购物车 */
+.pic-cart{
+  width: 148rpx;
+  height: 48rpx;
+  background: #00a0dc;
+  border-radius: 30rpx;
+  font-size: 20rpx;
+  color: white;
+  text-align: center;
+  line-height: 48rpx;
+}
+/* 空的div，设置间隔颜色 */
+/* .null{
+  height: 32rpx;
+  background: #f3f5f7;
+} */
+/* 商品介绍 */
+.introduce{
+  background: #ffffff;
+  height: 250rpx;
+  padding: 36rpx;
+  margin-bottom: 32rpx;
+}
+.int-name{
+  font-size: 28rpx;
+  margin-bottom: 25rpx;
+}
+.int-con{
+  font-size: 24rpx;
+  font-weight: 200;
+  color:rgb(77,85,93);
+  line-height: 48rpx;
+}
+/* 商品评价 */
+.evaluate{
+  background: #ffffff;
+  /* height: 695rpx; */
+  box-sizing: border-box;
+  padding: 36rpx;
+}
+.eva-name{
+  font-size: 28rpx;
+  margin-bottom: 25rpx;
+}
+.eva-eva{
+  display: flex;
+  font-size: 24rpx;
+  padding-bottom: 36rpx;
+  border-bottom: 1rpx solid rgba(7,17,27,0.1);
+}
+.eva-eva>view{
+  width: 120rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  text-align: center;
+  margin-right: 16rpx;
+  background: #00a0dc;
+  color: white;
+}
+.evabg{
+  background: #00a0dc
+}
+/* 评价内容 */
+.all{
+  height: 135rpx;
+  width:680rpx;
+  box-sizing: border-box;
+  padding: 32rpx 0;
+  margin: 0 auto;
+  border-bottom:1rpx solid #e6e7e8;
+}
+.all-title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20rpx;
+  color:rgb(147,153,159);
+  height: 24rpx;
+  line-height: 24ropx;
+}
+.all-img{
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+  margin-left: 12rpx;
+}
+.all-text{
+  font-size: 24rpx;
+  color: rgb(7,17,27);
+  margin-top: 12rpx
+}

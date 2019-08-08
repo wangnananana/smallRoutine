@@ -1,5 +1,0 @@
-<template name="Business">
-  <view id="business">
-    <text>商家</text>
-  </view>
-</template>

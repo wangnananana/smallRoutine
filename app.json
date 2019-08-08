@@ -1,16 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/detail/detail",
-    "pages/shop/shop",
-    "pages/foot/foot",
-    "pages/evaluate/evaluate",
-    "pages/business/business"
+    "pages/logs/logs",
+    "pages/detail/detail"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "外卖平台",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
